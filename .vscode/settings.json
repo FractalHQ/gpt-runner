@@ -1,0 +1,52 @@
+{
+	"deno.enable": true,
+	"deno.lint": true,
+	"deno.unstable": true,
+	"editor.formatOnSave": true,
+	"[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+
+	//* Custom region folding.
+	"explicitFolding.rules": {
+		"*": {
+			"beginRegex": "[ \\t]*?\\/\\/\\·(?:.*)?",
+			"endRegex": "[ \\t]*?\\/\\/\\⌟(?:.*)?"
+		}
+	},
+
+	//* Custom region colors.
+	"better-comments.tags": [
+		{
+			"tag": "·",
+			"color": "#374fa6",
+			"bold": true
+		},
+		{
+			"tag": "⌟",
+			"color": "#002255",
+			"bold": true
+		}
+	],
+
+	"editor.tokenColorCustomizations": {
+		"textMateRules": [
+			{
+				"name": "Fix itallic bug in Serendipity themes",
+				"scope": [
+					"meta.block",
+					"variable.language",
+					"variable.other.object.property"
+				],
+				"settings": {
+					"fontStyle": ""
+				}
+			},
+			{
+				"name": "Bold function calls",
+				"scope": ["entity.name.function"],
+				"settings": {
+					"fontStyle": "bold"
+				}
+			}
+		]
+	}
+}
